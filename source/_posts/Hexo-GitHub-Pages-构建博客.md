@@ -1,7 +1,11 @@
 ---
 title: Hexo + GitHub Pages 构建博客
 date: 2016-08-03 12:54:27
+categories: 常规
 tags:
+	- hexo
+	- github
+	- 博客
 ---
 ## 1. 介绍篇
 
@@ -120,3 +124,6 @@ cnpm就是淘宝镜像的命令。
 
 
 ## 3. hexo主题篇
+
+* [主题汇总](https://github.com/hexojs/hexo/wiki/Themes)。使用方法里面也有介绍，简单讲就是把主题克隆到theme文件夹，然后修改_config.yml配置文件中的theme选项就行。
+* 这里比较推荐主题[NexT](https://github.com/iissnan/hexo-theme-next)。自用就是这个，哈哈~

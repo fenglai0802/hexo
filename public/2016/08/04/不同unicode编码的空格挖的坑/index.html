@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="空白字符,编码," />
 
 
 
@@ -104,12 +104,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="黑月的BLooooog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta name="description" content="前段时间在做搜索的时候，遇到一个关于空格的小问题，总结一下。
+有时在文本值中会插入一些空格字符 （Unicode 字符集值 32 和 160） ，比如说标题之类的。当你对包含空格的值进行排序、 筛选或搜索时，这些字符有时会导致意外的结果。本次就是因为把数据存放在dom节点上，取出来做搜索的时候，发现编码发现了改变（从32变成了160），导致无法正确匹配。
+
+The non-breaking spa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不同unicode编码的空格挖的坑">
+<meta property="og:url" content="http://yoursite.com/2016/08/04/不同unicode编码的空格挖的坑/index.html">
 <meta property="og:site_name" content="黑月的BLooooog">
+<meta property="og:description" content="前段时间在做搜索的时候，遇到一个关于空格的小问题，总结一下。
+有时在文本值中会插入一些空格字符 （Unicode 字符集值 32 和 160） ，比如说标题之类的。当你对包含空格的值进行排序、 筛选或搜索时，这些字符有时会导致意外的结果。本次就是因为把数据存放在dom节点上，取出来做搜索的时候，发现编码发现了改变（从32变成了160），导致无法正确匹配。
+
+The non-breaking spa">
+<meta property="og:updated_time" content="2016-08-28T07:35:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑月的BLooooog">
+<meta name="twitter:title" content="不同unicode编码的空格挖的坑">
+<meta name="twitter:description" content="前段时间在做搜索的时候，遇到一个关于空格的小问题，总结一下。
+有时在文本值中会插入一些空格字符 （Unicode 字符集值 32 和 160） ，比如说标题之类的。当你对包含空格的值进行排序、 筛选或搜索时，这些字符有时会导致意外的结果。本次就是因为把数据存放在dom节点上，取出来做搜索的时候，发现编码发现了改变（从32变成了160），导致无法正确匹配。
+
+The non-breaking spa">
 
 
 
@@ -130,9 +143,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2016/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/04/不同unicode编码的空格挖的坑/"/>
 
-  <title> 归档 | 黑月的BLooooog </title>
+  <title> 不同unicode编码的空格挖的坑 | 黑月的BLooooog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -153,7 +166,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,177 +254,154 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/04/不同unicode编码的空格挖的坑/" itemprop="url">
-              
-                <span itemprop="name">不同unicode编码的空格挖的坑</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-04T17:33:14+08:00"
-              content="2016-08-04" >
-          08-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/04/鼠标跟随旋转效果实现/" itemprop="url">
-              
-                <span itemprop="name">鼠标跟随旋转效果实现</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-04T00:30:11+08:00"
-              content="2016-08-04" >
-          08-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/03/Hexo-GitHub-Pages-构建博客/" itemprop="url">
-              
-                <span itemprop="name">Hexo + GitHub Pages 构建博客</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-03T12:54:27+08:00"
-              content="2016-08-03" >
-          08-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/03/利用模块n管理node版本/" itemprop="url">
-              
-                <span itemprop="name">利用模块n管理node版本</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-03T10:44:47+08:00"
-              content="2016-08-03" >
-          08-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                不同unicode编码的空格挖的坑
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-04T17:33:14+08:00" content="2016-08-04">
+              2016-08-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前段时间在做搜索的时候，遇到一个关于空格的小问题，总结一下。</p>
+<p>有时在文本值中会插入一些空格字符 （Unicode 字符集值 32 和 160） ，比如说标题之类的。当你对包含空格的值进行<strong>排序、 筛选或搜索</strong>时，这些字符有时会导致意外的结果。本次就是因为把数据存放在dom节点上，取出来做搜索的时候，发现编码发现了改变（从32变成了160），导致无法正确匹配。</p>
+<blockquote>
+<p>The non-breaking space (U+00A0 Unicode, 160 decimal, &nbsp;) is not the same as the space character (U+0020 Unicode, 32 decimal). Well, both of them seems to be a “space”, but they are absolutely different characters.</p>
+</blockquote>
+<p>这里的解决方案是：采用正则替换成统一字符，如下</p>
+<pre><code>var s = &apos; &apos; // 假设这里是一个160的空格。
+var reg = new RegExp(String.fromCharCode(160),&quot;gm&quot;);
+var 32sp = String.fromCharCode(32)
+s = s.replace(reg, 32sp);
+</code></pre><p>后来重构代码，直接废除了将数据存在dom上这种方案，就更好了。</p>
+<p>除了空格字符，非打印字符在进行<strong>排序、 筛选或搜索</strong>操作时，也可能会遇到这类问题，<a href="https://support.office.com/zh-cn/article/%E5%88%A0%E9%99%A4%E6%96%87%E6%9C%AC%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC%E5%92%8C%E9%9D%9E%E6%89%93%E5%8D%B0%E5%AD%97%E7%AC%A6-023f3a08-3d56-49e4-bf0c-fe5303222c9d" target="_blank" rel="external">参考</a>。要注意~</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/空白字符/" rel="tag">#空白字符</a>
+          
+            <a href="/tags/编码/" rel="tag">#编码</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/04/鼠标跟随旋转效果实现/" rel="next" title="鼠标跟随旋转效果实现">
+                <i class="fa fa-chevron-left"></i> 鼠标跟随旋转效果实现
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -419,6 +409,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -438,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/heiyue.jpeg"
@@ -507,6 +510,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -603,11 +617,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   

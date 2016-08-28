@@ -1,7 +1,9 @@
 ---
 title: 利用模块n管理node版本
 date: 2016-08-03 10:44:47
+categories: 常规
 tags:
+	- node版本
 ---
 ### 利用模块n管理node版本
 
