@@ -1,0 +1,799 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Monda:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML5 API,文件上传," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="黑月的BLooooog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="文件/图片上传组件小结分为两部分来总结，第一部分为自定义样式，第二部分为js实现。
+一. 自定义样式通常来说，input[type=file]的默认样式都不能满足视觉的需求，所以需要套壳包装。常用的方式就是隐藏默认上传控件，并在其父级添加一个元素（比如label标签）来自定义样式，这样可以做到保留功能同时自定义样式。具体css代码如下：
+//HTML5
+&amp;lt;img src=&amp;apos;&amp;apo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件上传组件小结">
+<meta property="og:url" content="http://yoursite.com/2016/11/06/文件上传组件小结/index.html">
+<meta property="og:site_name" content="黑月的BLooooog">
+<meta property="og:description" content="文件/图片上传组件小结分为两部分来总结，第一部分为自定义样式，第二部分为js实现。
+一. 自定义样式通常来说，input[type=file]的默认样式都不能满足视觉的需求，所以需要套壳包装。常用的方式就是隐藏默认上传控件，并在其父级添加一个元素（比如label标签）来自定义样式，这样可以做到保留功能同时自定义样式。具体css代码如下：
+//HTML5
+&amp;lt;img src=&amp;apos;&amp;apo">
+<meta property="og:updated_time" content="2016-11-06T10:59:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="文件上传组件小结">
+<meta name="twitter:description" content="文件/图片上传组件小结分为两部分来总结，第一部分为自定义样式，第二部分为js实现。
+一. 自定义样式通常来说，input[type=file]的默认样式都不能满足视觉的需求，所以需要套壳包装。常用的方式就是隐藏默认上传控件，并在其父级添加一个元素（比如label标签）来自定义样式，这样可以做到保留功能同时自定义样式。具体css代码如下：
+//HTML5
+&amp;lt;img src=&amp;apos;&amp;apo">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/06/文件上传组件小结/"/>
+
+  <title> 文件上传组件小结 | 黑月的BLooooog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黑月的BLooooog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-moon-o"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark-o"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                文件上传组件小结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-06T15:05:50+08:00" content="2016-11-06">
+              2016-11-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="文件-图片上传组件小结"><a href="#文件-图片上传组件小结" class="headerlink" title="文件/图片上传组件小结"></a>文件/图片上传组件小结</h1><p>分为两部分来总结，第一部分为<em>自定义样式</em>，第二部分为<em>js实现</em>。</p>
+<h3 id="一-自定义样式"><a href="#一-自定义样式" class="headerlink" title="一. 自定义样式"></a>一. 自定义样式</h3><p>通常来说，<code>input[type=file]</code>的默认样式都不能满足视觉的需求，所以需要套壳包装。常用的方式就是隐藏默认上传控件，并在其父级添加一个元素（比如label标签）来自定义样式，这样可以做到保留功能同时自定义样式。具体css代码如下：</p>
+<pre><code>//HTML5
+&lt;img src=&apos;&apos; ref=preview&gt;
+&lt;label class=&quot;u-btn btn-upload&quot;&gt;
+    &lt;input type=&quot;file&quot; ref=files  on-change={this.fileChange()}&gt;上传图片
+&lt;/label&gt;
+
+//CSS
+.u-btn {   //基础按钮样式
+    font: inherit;
+    position:relative;
+    line-height: 34px;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 34px;
+    margin: 0;
+    padding: 0 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #444;
+    border: 1px solid #ddd;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #f4f4f4;
+    -webkit-appearance: none;
+}
+.u-btn:focus, .u-btn:hover {
+    text-decoration: none;border: 1px solid #adadad;background: #e5e5e5;
+}
+.btn-upload {  
+    overflow: hidden;
+    input{
+        opacity: 0;
+        filter:alpha(opacity=0);
+        font-size: 100px;
+        position: absolute;
+        top: 0;right: 0
+    }
+}
+</code></pre><h3 id="二-js实现"><a href="#二-js实现" class="headerlink" title="二. js实现"></a>二. js实现</h3><p>需求：上传单张图片，并能预览。</p>
+<p>框架：<a href="https://github.com/regularjs/regular" target="_blank" rel="external">regular</a></p>
+<pre><code>// 这里使用regular框架，不详细说明
+// 在`input[type=file]`上绑定了`onchange`监听事件,回调为`fileChange`方法
+fileChange: function(ev) {
+    var input = this.$refs.files;  // regular获取节点的方式
+    var preview = this.$refs.preview;  // 获取预览dom
+    var file = input.files[0]; // 获取上传的文件
+    if (!/\/(?:jpeg|jpg|png)/i.test(file.type)) { //检查上传文件的类型，此处需要图片类型的文件，并且规定了后缀条件。
+        //提示错误信息
+        return;
+    }
+    var reader = new FileReader();
+    var self = this;
+    reader.onload = function(e) {
+
+        var result = self.img = this.result; // this指向reader,这个result即上传文件数据，将这个result用ajax传输即可。
+
+        // 组件操作，可忽略
+        self.data.show = true;
+        self.data.str = &apos;重新选择&apos;
+        self.$emit(&apos;upload&apos;);
+
+        preview.src = result; // 预览dom设置src
+
+        // console.log(preview.naturalWidth)
+        // console.log(preview.naturalHeight)
+        // 组件操作，可忽略
+        self.imgNatrualSize = {
+            width: preview.naturalWidth,
+            height: preview.naturalHeight
+        }
+
+        // 获取文件名
+        var imgName = input.value;
+        var index = imgName.lastIndexOf(&apos;\\&apos;);
+        self.imgName = index !== -1 ? imgName.slice(index+1) : imgName;
+
+        input.value = &apos;&apos;; // 清空图片上传框的值
+
+   };
+
+   reader.readAsDataURL(file); // 将文件转成base64的格式.
+},
+</code></pre><h5 id="附录-FileReader-API简介"><a href="#附录-FileReader-API简介" class="headerlink" title="附录 FileReader API简介"></a>附录 FileReader API简介</h5><h6 id="1-FileReader对象的方法"><a href="#1-FileReader对象的方法" class="headerlink" title="1. FileReader对象的方法"></a>1. FileReader对象的方法</h6><p>FileReader 的实例拥有 4 个方法，其中 3 个用以读取文件，另一个用来中断读取。下面的表格列出了这些方法以及他们的参数和功能，需要注意的是 ，无论读取成功或失败，方法并不会返回读取结果，这一结果存储在 result属性中。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法名</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">abort</td>
+<td style="text-align:left">none</td>
+<td style="text-align:left">中断读取</td>
+</tr>
+<tr>
+<td style="text-align:left">readAsBinaryString</td>
+<td style="text-align:left">file</td>
+<td style="text-align:left">将文件读取为二进制码</td>
+</tr>
+<tr>
+<td style="text-align:left">readAsDataURL</td>
+<td style="text-align:left">file</td>
+<td style="text-align:left">将文件读取为 DataURL</td>
+</tr>
+<tr>
+<td style="text-align:left">readAsText</td>
+<td style="text-align:left">file</td>
+<td style="text-align:left">将文件读取为文本</td>
+</tr>
+</tbody>
+</table>
+<p><em>readAsText</em>：该方法有两个参数，其中第二个参数是文本的编码方式，默认值为 UTF-8。这个方法非常容易理解，将文件以文本方式读取，读取的结果即是这个文本文件中的内容。</p>
+<p><em>readAsBinaryString</em>：该方法将文件读取为二进制字符串，通常我们将它传送到后端，后端可以通过这段字符串存储文件。</p>
+<p><em>readAsDataURL</em>：这是例子程序中用到的方法，该方法将文件读取为一段以 data: 开头的字符串，这段字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。</p>
+<h6 id="2-FileReader对象的事件"><a href="#2-FileReader对象的事件" class="headerlink" title="2. FileReader对象的事件"></a>2. FileReader对象的事件</h6><p>FileReader 包含了一套完整的事件模型，用于捕获读取文件时的状态，下面这个表格归纳了这些事件。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">事件</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">onabort</td>
+<td style="text-align:left">中断时触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onerror</td>
+<td style="text-align:left">出错时触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onload</td>
+<td style="text-align:left">文件读取成功完成时触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onloadend</td>
+<td style="text-align:left">读取完成触发，无论成功或失败</td>
+</tr>
+<tr>
+<td style="text-align:left">onloadstart</td>
+<td style="text-align:left">读取开始时触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onprogress</td>
+<td style="text-align:left">读取中</td>
+</tr>
+</tbody>
+</table>
+<p>文件一旦开始读取，无论成功或失败，实例的 result 属性都会被填充。如果读取失败，则 result 的值为 null ，否则即是读取的结果，绝大多数的程序都会在成功读取文件的时候，抓取这个值。</p>
+<pre><code>var reader = new FileReader();
+reader.onload = function() {  
+    this.result;  
+};
+</code></pre><p><em>ps</em> 可以利用这些事件制作文件读取的进度条，此处不详细展开，有空在做补充。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5-API/" rel="tag">#HTML5 API</a>
+          
+            <a href="/tags/文件上传/" rel="tag">#文件上传</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/17/git子模块/" rel="next" title="git子模块">
+                <i class="fa fa-chevron-left"></i> git子模块
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/heiyue.jpeg"
+               alt="黑月" />
+          <p class="site-author-name" itemprop="name">黑月</p>
+          <p class="site-description motion-element" itemprop="description">弱小和无知不是生存的障碍，傲慢才是。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fenglai0802" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件-图片上传组件小结"><span class="nav-number">1.</span> <span class="nav-text">文件/图片上传组件小结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-自定义样式"><span class="nav-number">1.0.1.</span> <span class="nav-text">一. 自定义样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-js实现"><span class="nav-number">1.0.2.</span> <span class="nav-text">二. js实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#附录-FileReader-API简介"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">附录 FileReader API简介</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-FileReader对象的方法"><span class="nav-number">1.0.2.0.1.1.</span> <span class="nav-text">1. FileReader对象的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-FileReader对象的事件"><span class="nav-number">1.0.2.0.1.2.</span> <span class="nav-text">2. FileReader对象的事件</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黑月</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

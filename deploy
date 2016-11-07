@@ -1,4 +1,13 @@
+cd /Users/heiyue/workspace/BLooooooooG
+
 hexo clean
+echo '---------------clean---------------'
+
 hexo generate
+echo '---------------generate---------------'
+
 hexo deploy
+echo '---------------deploy---------------'
+
 open https://fenglai0802.github.io
+echo '---------------open---------------'

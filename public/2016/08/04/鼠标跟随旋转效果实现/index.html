@@ -114,14 +114,16 @@ ok，直接开干，这个demo里面主要用到了两个属性：transform和pe
 <meta property="og:description" content="鼠标跟随的3D转动首先，甩一枚简单的demo看下要实现的效果。点击右下角可查看源码。
 ok，直接开干，这个demo里面主要用到了两个属性：transform和perspective。分别可以设置3D和透视投影的效果。
 3D变换效果首先介绍下transform，写过一丢丢动画的孩子都会接触过的属性。CSS3的3D效果是使用transform的rotateX(Y, Z)，translateX(Y, Z">
+<meta property="og:image" content="http://yoursite.com/./images/鼠标跟随旋转效果实现/坐标.png">
 <meta property="og:image" content="http://yoursite.com/./images/鼠标跟随旋转效果实现/透视原理图.png">
-<meta property="og:updated_time" content="2016-08-28T08:03:28.000Z">
+<meta property="og:image" content="http://yoursite.com/./images/鼠标跟随旋转效果实现/透视原理图-平面.png">
+<meta property="og:updated_time" content="2016-09-17T07:39:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="鼠标跟随旋转效果实现">
 <meta name="twitter:description" content="鼠标跟随的3D转动首先，甩一枚简单的demo看下要实现的效果。点击右下角可查看源码。
 ok，直接开干，这个demo里面主要用到了两个属性：transform和perspective。分别可以设置3D和透视投影的效果。
 3D变换效果首先介绍下transform，写过一丢丢动画的孩子都会接触过的属性。CSS3的3D效果是使用transform的rotateX(Y, Z)，translateX(Y, Z">
-<meta name="twitter:image" content="http://yoursite.com/./images/鼠标跟随旋转效果实现/透视原理图.png">
+<meta name="twitter:image" content="http://yoursite.com/./images/鼠标跟随旋转效果实现/坐标.png">
 
 
 
@@ -336,7 +338,7 @@ ok，直接开干，这个demo里面主要用到了两个属性：transform和pe
         <h3 id="鼠标跟随的3D转动"><a href="#鼠标跟随的3D转动" class="headerlink" title="鼠标跟随的3D转动"></a>鼠标跟随的3D转动</h3><p>首先，甩一枚简单的<a href="http://runjs.cn/detail/1hnseaw3" target="_blank" rel="external">demo</a>看下要实现的效果。点击右下角可查看源码。</p>
 <p>ok，直接开干，这个demo里面主要用到了两个属性：<code>transform</code>和<code>perspective</code>。分别可以设置3D和透视投影的效果。</p>
 <h3 id="3D变换效果"><a href="#3D变换效果" class="headerlink" title="3D变换效果"></a>3D变换效果</h3><p>首先介绍下<code>transform</code>，写过一丢丢动画的孩子都会接触过的属性。<code>CSS3</code>的3D效果是使用<code>transform</code>的<code>rotateX(Y, Z)</code>，<code>translateX(Y, Z)</code>，<code>scaleX(Y, Z)</code>方法进行设置的。</p>
-
+<p><img src="./images/鼠标跟随旋转效果实现/坐标.png" alt=""></p>
 <p>上图就是一个3D坐标系，需要注意的是，3D元素的原点应该是在元素的中心，而不是像上图一样在立方体的一个角上。如果只是单单一个元素的话，它的形状就是一个平面区域。下面简单介绍一下<code>transform</code>中相关的3D方法。</p>
 <h5 id="rotateX-Y-Z"><a href="#rotateX-Y-Z" class="headerlink" title="rotateX(Y, Z)"></a>rotateX(Y, Z)</h5><p>顾名思义就是绕着X轴（Y轴或者Z轴）旋转。注意：<strong>逆时针为正方向</strong>（如图）</p>
 <h5 id="translateX-Y-Z"><a href="#translateX-Y-Z" class="headerlink" title="translateX(Y, Z)"></a>translateX(Y, Z)</h5><p>默认情况下，开启的是平面投影，所以此时设置<code>translateZ</code>是没有什么luan用的。那怎么生效呢，看下去才告诉你（╭(╯^╰)╮）。</p>
@@ -364,7 +366,7 @@ ok，直接开干，这个demo里面主要用到了两个属性：transform和pe
 <p>先看下<strong>3D视角</strong>的原理图，来自<a href="https://css-tricks.com/tour-performant-responsive-css-site/" target="_blank" rel="external">这里</a></p>
 <p><img src="./images/鼠标跟随旋转效果实现/透视原理图.png" alt=""></p>
 <p>图中淡蓝色部分即电脑屏幕所在的平面（z=0的平面），眼睛所在的位置就是通过<code>perspective</code>设置的模拟焦点位置，焦点到z=0平面的距离就是<code>perspective</code>的值，而橘红色部分就是设置了<code>translateZ</code>为负值的3D元素的所在平面，3D元素到z=0平面的距离就是3D元素上<code>translateZ</code>的值，如图为负值，如果在焦点和z=0及平面之间，则为正值。</p>
-<p>这是透视的<strong>平面</strong>原理图，来自<a href="https://segmentfault.com/a/1190000003843764" target="_blank" rel="external">这里</a>。<br></p>
+<p>这是透视的<strong>平面</strong>原理图，来自<a href="https://segmentfault.com/a/1190000003843764" target="_blank" rel="external">这里</a>。<br><img src="./images/鼠标跟随旋转效果实现/透视原理图-平面.png" alt=""></p>
 <p>通过这两张图，应该能够很直观的看出<code>perspective</code>和<code>translateZ</code>的设置对于3D元素在屏幕上产生的投影的效果了。当元素的z值大于’perspective’的值时，你就看不见它了，就像你的boss站在你的脑袋后面一样一样。一般情况下，’perspective’设置500px到1000px在视觉上比较合理。</p>
 <p>在<a href="http://runjs.cn/detail/1hnseaw3" target="_blank" rel="external">demo</a>中，如果取消<code>perspective</code>透视属性，你会发现，卡片就像一个没固定好的相框在转动，这就算是透视属性的必要性。</p>
 <p>透视投影还可以设置焦点的位置（默认在中心），因为你的脑袋也是可以动的：</p>
@@ -503,7 +505,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -511,7 +513,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -520,7 +522,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
