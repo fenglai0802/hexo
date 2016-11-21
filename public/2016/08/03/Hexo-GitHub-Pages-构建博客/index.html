@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -45,35 +45,17 @@
   
 
   
-    
-      
-    
 
-    
+  
+
   
 
   
 
   
     
-      
     
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Monda:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -81,9 +63,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="hexo,github,博客," />
@@ -97,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
 
 
 
@@ -109,7 +91,7 @@
 什么是GitHub PagesGitHub Pages 可以被认为是用户编写的、托管在github上的静态网页。由于它的空间免费稳定， 可以用于介绍托管在github上的Project或者搭建网站。有两种形式: Project Site 和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo + GitHub Pages 构建博客">
-<meta property="og:url" content="http://yoursite.com/2016/08/03/Hexo-GitHub-Pages-构建博客/index.html">
+<meta property="og:url" content="https://fenglai0802.github.io/2016/08/03/Hexo-GitHub-Pages-构建博客/index.html">
 <meta property="og:site_name" content="黑月的BLooooog">
 <meta property="og:description" content="1. 介绍篇DEMO
 什么是HexoHexo 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页。作者是台湾大学生tommy351。
@@ -131,7 +113,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
     }
   };
@@ -140,12 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/03/Hexo-GitHub-Pages-构建博客/"/>
+  <link rel="canonical" href="https://fenglai0802.github.io/2016/08/03/Hexo-GitHub-Pages-构建博客/"/>
+
 
   <title> Hexo + GitHub Pages 构建博客 | 黑月的BLooooog </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -166,7 +149,7 @@
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
@@ -198,27 +181,13 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-moon-o"></i> <br />
-            
             首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -227,8 +196,6 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-bookmark-o"></i> <br />
             
             标签
           </a>
@@ -261,7 +228,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -320,6 +287,11 @@
           
 
           
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
         </div>
       </header>
     
@@ -331,7 +303,7 @@
       
 
       
-        <h2 id="1-介绍篇"><a href="#1-介绍篇" class="headerlink" title="1. 介绍篇"></a>1. 介绍篇</h2><p><a href="https://fenglai0802.github.io/" target="_blank" rel="external">DEMO</a></p>
+        <h2 id="1-介绍篇"><a href="#1-介绍篇" class="headerlink" title="1. 介绍篇"></a>1. 介绍篇</h2><p><a href="https://fenglai0802.github.io/">DEMO</a></p>
 <h4 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h4><p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页。作者是台湾大学生tommy351。</p>
 <h4 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h4><p><a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> 可以被认为是用户编写的、托管在github上的静态网页。由于它的空间免费稳定， 可以用于介绍托管在github上的Project或者搭建网站。有两种形式: Project Site 和 User/Org Site。</p>
 <p>GitHub Pages 生成的网站的默认域名是 username.github.io 或者 username.github.io/project-name ，但GitHub Pages是支持自定义域名的，参考教程：<a href="https://www.zhihu.com/question/31377141" target="_blank" rel="external">github怎么绑定自己的域名</a></p>
@@ -340,7 +312,7 @@
 <li>权限错误：命令前加sudo</li>
 </ol>
 <h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><ul>
-<li>安装node (建议采用<a href="https://fenglai0802.github.io/2016/08/03/%E5%88%A9%E7%94%A8%E6%A8%A1%E5%9D%97n%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" target="_blank" rel="external">n模块安装</a>)</li>
+<li>安装node (建议采用<a href="https://fenglai0802.github.io/2016/08/03/%E5%88%A9%E7%94%A8%E6%A8%A1%E5%9D%97n%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/">n模块安装</a>)</li>
 <li>安装git（安装Xcode自带）</li>
 <li>申请github账号</li>
 </ul>
@@ -409,7 +381,7 @@
 </ul>
 <p>此时public文件夹下的内容就会被上传到你的github中fenglai0802.github.io的这个项目下。</p>
 <ul>
-<li><p>然后再浏览器中输入 <a href="https://fenglai0802.github.io/" target="_blank" rel="external">https://fenglai0802.github.io/</a> 就可以查看了。</p>
+<li><p>然后再浏览器中输入 <a href="https://fenglai0802.github.io/">https://fenglai0802.github.io/</a> 就可以查看了。</p>
 </li>
 <li><p>每次部署的步骤，可按以下三步来进行。(建议自己写一个shell方便发布)</p>
 <pre><code>$ hexo clean
@@ -526,27 +498,27 @@ $ hexo deploy
       
 
       <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/heiyue.jpeg"
+               src="/images/1.jpg"
                alt="黑月" />
           <p class="site-author-name" itemprop="name">黑月</p>
-          <p class="site-description motion-element" itemprop="description">弱小和无知不是生存的障碍，傲慢才是。</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              
                 <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -571,17 +543,6 @@ $ hexo deploy
         
 
         <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/fenglai0802" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
           
         </div>
 
@@ -639,6 +600,22 @@ $ hexo deploy
 
         
 
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
         
       </div>
     </footer>
@@ -669,55 +646,30 @@ $ hexo deploy
 
 
   
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-
-
-  
-
-
-
-  
-
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
 
@@ -725,10 +677,38 @@ $ hexo deploy
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
 
   
 
   
+
+  
+
 
 </body>
 </html>

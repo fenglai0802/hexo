@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -45,35 +45,17 @@
   
 
   
-    
-      
-    
 
-    
+  
+
   
 
   
 
   
     
-      
     
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Monda:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -81,9 +63,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -97,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
 
 
 
@@ -106,7 +88,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="黑月的BLooooog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="https://fenglai0802.github.io/index.html">
 <meta property="og:site_name" content="黑月的BLooooog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="黑月的BLooooog">
@@ -121,7 +103,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
     }
   };
@@ -130,12 +112,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="https://fenglai0802.github.io/"/>
+
 
   <title> 黑月的BLooooog </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -158,7 +141,7 @@
  ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
@@ -190,27 +173,13 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-moon-o"></i> <br />
-            
             首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -219,8 +188,6 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-bookmark-o"></i> <br />
             
             标签
           </a>
@@ -253,7 +220,119 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/20/Atom中文件识别默认语法修改/" itemprop="url">
+                  grammar更改笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-20T13:18:57+08:00" content="2016-11-20">
+              2016-11-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Atom中文件识别默认语法修改"><a href="#Atom中文件识别默认语法修改" class="headerlink" title="Atom中文件识别默认语法修改"></a>Atom中文件识别默认语法修改</h1><ul>
+<li><em>需求</em>：公司使用自己开发的css预处理器mcss来进行web样式开发，这类文件的后缀为.mcss，在Atom中无法识别，因此每次打开这类文件，都需要ctrl+shift+L选择语言(grammar)版本，通常会选择scss或者less来代替一下。重复度比较大。</li>
+<li><em>思路</em>：解决这个问题有2个办法：一个就是写个Atom插件，让Atom可以识别mcss语言；另一个就是将就策略，让Atom自动用scss或者less的语法来识别.mcss文件。考虑到办法一短时间无法实现（好吧，其实是因为菜），这里先用方法二处理下，后续有缘再进行插件的开发。</li>
+</ul>
+<h2 id="Atom语法介绍"><a href="#Atom语法介绍" class="headerlink" title="Atom语法介绍"></a>Atom语法介绍</h2><p>加载了一个文件以后，Atom会做一些事情来试图识别出文件的类型。大部分情况下，Atom 会通过文件的扩展名（.md 通常是一个 Markdown 文件，等等）来完成这项工作，但有时只通过扩展名难以判断，它会对文件内容进行一些检查来确定。</p>
+<p>如果加载了一个 Atom 无法判断语法的文件，它会默认为是最简单的纯文本类型（Plain Text）。如果它把文件默认为纯文本，或者弄错了文件类型，再或者由于一些原因你想修改文件的当前作用语法，可以按下 ctrl-shift-L 调出语法选择器。</p>
+<p><img src="./images/Atom中文件识别默认语法修改/grammar.png" alt=""></p>
+<p>一旦手动修改了一个文件的语法，Atom会记住它，除非你将语法设置回自动检测，或者手动选择一个不同的语法。</p>
+<p>语法选择器的功能在 <a href="https://github.com/atom/grammar-selector" target="_blank" rel="external">atom/grammar-selector</a> 这个 package 里实现。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>在Atom的配置文件夹目录下有一个init.coffee的文件，用于做Atom初始化设置。</p>
+<p>在其中添加代码</p>
+<pre><code># add &quot;.mcss&quot; to SCSS grammar:
+for grammar of atom.grammars.grammars
+  if grammar.name is &quot;Less&quot;
+    grammar.fileTypes.push(&apos;mcss&apos;)
+atom.grammars.onDidAddGrammar (grammar) -&gt;
+  if grammar.name is &quot;Less&quot;
+    grammar.fileTypes.push(&apos;mcss&apos;)
+</code></pre><p>表示在Less的语法中，添加识别文件类型mcss。从而使mcss文件能够被当做Less识别</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -329,90 +408,14 @@
         
           
             <h1 id="文件-图片上传组件小结"><a href="#文件-图片上传组件小结" class="headerlink" title="文件/图片上传组件小结"></a>文件/图片上传组件小结</h1><p>分为两部分来总结，第一部分为<em>自定义样式</em>，第二部分为<em>js实现</em>。</p>
-<h3 id="一-自定义样式"><a href="#一-自定义样式" class="headerlink" title="一. 自定义样式"></a>一. 自定义样式</h3><p>通常来说，<code>input[type=file]</code>的默认样式都不能满足视觉的需求，所以需要套壳包装。常用的方式就是隐藏默认上传控件，并在其父级添加一个元素（比如label标签）来自定义样式，这样可以做到保留功能同时自定义样式。具体css代码如下：</p>
-<pre><code>//HTML5
-&lt;img src=&apos;&apos; ref=preview&gt;
-&lt;label class=&quot;u-btn btn-upload&quot;&gt;
-    &lt;input type=&quot;file&quot; ref=files  on-change={this.fileChange()}&gt;上传图片
-&lt;/label&gt;
-
-//CSS
-.u-btn {   //基础按钮样式
-    font: inherit;
-    position:relative;
-    line-height: 34px;
-    display: inline-block;
-    box-sizing: border-box;
-    height: 34px;
-    margin: 0;
-    padding: 0 12px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #444;
-    border: 1px solid #ddd;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background: #f4f4f4;
-    -webkit-appearance: none;
-}
-.u-btn:focus, .u-btn:hover {
-    text-decoration: none;border: 1px solid #adadad;background: #e5e5e5;
-}
-.btn-upload {  
-    overflow: hidden;
-    input{
-        opacity: 0;
-        filter:alpha(opacity=0);
-        font-size: 100px;
-        position: absolute;
-        top: 0;right: 0
-    }
-}
-</code></pre><h3 id="二-js实现"><a href="#二-js实现" class="headerlink" title="二. js实现"></a>二. js实现</h3><p>需求：上传单张图片，并能预览。</p>
+<h2 id="一-自定义样式"><a href="#一-自定义样式" class="headerlink" title="一. 自定义样式"></a>一. 自定义样式</h2><p>通常来说，<code>input[type=file]</code>的默认样式都不能满足视觉的需求，所以需要套壳包装。常用的方式就是隐藏默认上传控件，并在其父级添加一个元素（比如label标签）来自定义样式，这样可以做到保留功能同时自定义样式。具体css代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//HTML5</div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">''</span> <span class="attr">ref</span>=<span class="string">preview</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"u-btn btn-upload"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">ref</span>=<span class="string">files</span>  <span class="attr">on-change</span>=<span class="string">&#123;this.fileChange()&#125;</span>&gt;</span>上传图片</div><div class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//CSS</div><div class="line">.u-btn &#123;   //基础按钮样式</div><div class="line">    font: inherit;</div><div class="line">    position:relative;</div><div class="line">    line-height: 34px;</div><div class="line">    display: inline-block;</div><div class="line">    box-sizing: border-box;</div><div class="line">    height: 34px;</div><div class="line">    margin: 0;</div><div class="line">    padding: 0 12px;</div><div class="line">    cursor: pointer;</div><div class="line">    text-decoration: none;</div><div class="line">    color: #444;</div><div class="line">    border: 1px solid #ddd;</div><div class="line">    -moz-border-radius: 3px;</div><div class="line">    border-radius: 3px;</div><div class="line">    background: #f4f4f4;</div><div class="line">    -webkit-appearance: none;</div><div class="line">&#125;</div><div class="line">.u-btn:focus, .u-btn:hover &#123;</div><div class="line">    text-decoration: none;border: 1px solid #adadad;background: #e5e5e5;</div><div class="line">&#125;</div><div class="line">.btn-upload &#123;  </div><div class="line">    overflow: hidden;</div><div class="line">    input &#123;</div><div class="line">        opacity: 0;</div><div class="line">        filter:alpha(opacity=0);</div><div class="line">        font-size: 100px;</div><div class="line">        position: absolute;</div><div class="line">        top: 0;right: 0</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="二-js实现"><a href="#二-js实现" class="headerlink" title="二. js实现"></a>二. js实现</h2><p>需求：上传单张图片，并能预览。</p>
 <p>框架：<a href="https://github.com/regularjs/regular" target="_blank" rel="external">regular</a></p>
-<pre><code>// 这里使用regular框架，不详细说明
-// 在`input[type=file]`上绑定了`onchange`监听事件,回调为`fileChange`方法
-fileChange: function(ev) {
-    var input = this.$refs.files;  // regular获取节点的方式
-    var preview = this.$refs.preview;  // 获取预览dom
-    var file = input.files[0]; // 获取上传的文件
-    if (!/\/(?:jpeg|jpg|png)/i.test(file.type)) { //检查上传文件的类型，此处需要图片类型的文件，并且规定了后缀条件。
-        //提示错误信息
-        return;
-    }
-    var reader = new FileReader();
-    var self = this;
-    reader.onload = function(e) {
-
-        var result = self.img = this.result; // this指向reader,这个result即上传文件数据，将这个result用ajax传输即可。
-
-        // 组件操作，可忽略
-        self.data.show = true;
-        self.data.str = &apos;重新选择&apos;
-        self.$emit(&apos;upload&apos;);
-
-        preview.src = result; // 预览dom设置src
-
-        // console.log(preview.naturalWidth)
-        // console.log(preview.naturalHeight)
-        // 组件操作，可忽略
-        self.imgNatrualSize = {
-            width: preview.naturalWidth,
-            height: preview.naturalHeight
-        }
-
-        // 获取文件名
-        var imgName = input.value;
-        var index = imgName.lastIndexOf(&apos;\\&apos;);
-        self.imgName = index !== -1 ? imgName.slice(index+1) : imgName;
-
-        input.value = &apos;&apos;; // 清空图片上传框的值
-
-   };
-
-   reader.readAsDataURL(file); // 将文件转成base64的格式.
-},
-</code></pre><h5 id="附录-FileReader-API简介"><a href="#附录-FileReader-API简介" class="headerlink" title="附录 FileReader API简介"></a>附录 FileReader API简介</h5><h6 id="1-FileReader对象的方法"><a href="#1-FileReader对象的方法" class="headerlink" title="1. FileReader对象的方法"></a>1. FileReader对象的方法</h6><p>FileReader 的实例拥有 4 个方法，其中 3 个用以读取文件，另一个用来中断读取。下面的表格列出了这些方法以及他们的参数和功能，需要注意的是 ，无论读取成功或失败，方法并不会返回读取结果，这一结果存储在 result属性中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 这里使用regular框架，不详细说明</span></div><div class="line"><span class="comment">// 在`input[type=file]`上绑定了`onchange`监听事件,回调为`fileChange`方法</span></div><div class="line">fileChange: <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> input = <span class="keyword">this</span>.$refs.files;  <span class="comment">// regular获取节点的方式</span></div><div class="line">    <span class="keyword">var</span> preview = <span class="keyword">this</span>.$refs.preview;  <span class="comment">// 获取预览dom</span></div><div class="line">    <span class="keyword">var</span> file = input.files[<span class="number">0</span>]; <span class="comment">// 获取上传的文件</span></div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/\/(?:jpeg|jpg|png)/i</span>.test(file.type)) &#123; <span class="comment">//检查上传文件的类型，此处需要图片类型的文件，并且规定了后缀条件。</span></div><div class="line">        <span class="comment">//提示错误信息</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">    reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> result = self.img = <span class="keyword">this</span>.result; <span class="comment">// this指向reader,这个result即上传文件数据，将这个result用ajax传输即可。</span></div><div class="line"></div><div class="line">        <span class="comment">// 组件操作，可忽略</span></div><div class="line">        self.data.show = <span class="literal">true</span>;</div><div class="line">        self.data.str = <span class="string">'重新选择'</span></div><div class="line">        self.$emit(<span class="string">'upload'</span>);</div><div class="line"></div><div class="line">        preview.src = result; <span class="comment">// 预览dom设置src</span></div><div class="line"></div><div class="line">        <span class="comment">// console.log(preview.naturalWidth)</span></div><div class="line">        <span class="comment">// console.log(preview.naturalHeight)</span></div><div class="line">        <span class="comment">// 组件操作，可忽略</span></div><div class="line">        self.imgNatrualSize = &#123;</div><div class="line">            width: preview.naturalWidth,</div><div class="line">            height: preview.naturalHeight</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// 获取文件名</span></div><div class="line">        <span class="keyword">var</span> imgName = input.value;</div><div class="line">        <span class="keyword">var</span> index = imgName.lastIndexOf(<span class="string">'\\'</span>);</div><div class="line">        self.imgName = index !== <span class="number">-1</span> ? imgName.slice(index+<span class="number">1</span>) : imgName;</div><div class="line"></div><div class="line">        input.value = <span class="string">''</span>; <span class="comment">// 清空图片上传框的值</span></div><div class="line"></div><div class="line">   &#125;;</div><div class="line"></div><div class="line">   reader.readAsDataURL(file); <span class="comment">// 将文件转成base64的格式.</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<h2 id="附录-FileReader-API简介"><a href="#附录-FileReader-API简介" class="headerlink" title="附录 FileReader API简介"></a>附录 FileReader API简介</h2><p>###1. FileReader对象的方法</p>
+<p>FileReader 的实例拥有 4 个方法，其中 3 个用以读取文件，另一个用来中断读取。下面的表格列出了这些方法以及他们的参数和功能，需要注意的是 ，无论读取成功或失败，方法并不会返回读取结果，这一结果存储在 result属性中。</p>
 <table>
 <thead>
 <tr>
@@ -447,7 +450,7 @@ fileChange: function(ev) {
 <p><em>readAsText</em>：该方法有两个参数，其中第二个参数是文本的编码方式，默认值为 UTF-8。这个方法非常容易理解，将文件以文本方式读取，读取的结果即是这个文本文件中的内容。</p>
 <p><em>readAsBinaryString</em>：该方法将文件读取为二进制字符串，通常我们将它传送到后端，后端可以通过这段字符串存储文件。</p>
 <p><em>readAsDataURL</em>：这是例子程序中用到的方法，该方法将文件读取为一段以 data: 开头的字符串，这段字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。</p>
-<h6 id="2-FileReader对象的事件"><a href="#2-FileReader对象的事件" class="headerlink" title="2. FileReader对象的事件"></a>2. FileReader对象的事件</h6><p>FileReader 包含了一套完整的事件模型，用于捕获读取文件时的状态，下面这个表格归纳了这些事件。</p>
+<h3 id="2-FileReader对象的事件"><a href="#2-FileReader对象的事件" class="headerlink" title="2. FileReader对象的事件"></a>2. FileReader对象的事件</h3><p>FileReader 包含了一套完整的事件模型，用于捕获读取文件时的状态，下面这个表格归纳了这些事件。</p>
 <table>
 <thead>
 <tr>
@@ -525,7 +528,7 @@ reader.onload = function() {
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -653,7 +656,7 @@ reader.onload = function() {
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -988,7 +991,7 @@ reader.onload = function() {
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -1112,7 +1115,7 @@ s = s.replace(reg, 32sp);
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -1283,7 +1286,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -1358,7 +1361,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
       
         
           
-            <h2 id="1-介绍篇"><a href="#1-介绍篇" class="headerlink" title="1. 介绍篇"></a>1. 介绍篇</h2><p><a href="https://fenglai0802.github.io/" target="_blank" rel="external">DEMO</a></p>
+            <h2 id="1-介绍篇"><a href="#1-介绍篇" class="headerlink" title="1. 介绍篇"></a>1. 介绍篇</h2><p><a href="https://fenglai0802.github.io/">DEMO</a></p>
 <h4 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h4><p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页。作者是台湾大学生tommy351。</p>
 <h4 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h4><p><a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> 可以被认为是用户编写的、托管在github上的静态网页。由于它的空间免费稳定， 可以用于介绍托管在github上的Project或者搭建网站。有两种形式: Project Site 和 User/Org Site。</p>
 <p>GitHub Pages 生成的网站的默认域名是 username.github.io 或者 username.github.io/project-name ，但GitHub Pages是支持自定义域名的，参考教程：<a href="https://www.zhihu.com/question/31377141" target="_blank" rel="external">github怎么绑定自己的域名</a></p>
@@ -1367,7 +1370,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
 <li>权限错误：命令前加sudo</li>
 </ol>
 <h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><ul>
-<li>安装node (建议采用<a href="https://fenglai0802.github.io/2016/08/03/%E5%88%A9%E7%94%A8%E6%A8%A1%E5%9D%97n%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" target="_blank" rel="external">n模块安装</a>)</li>
+<li>安装node (建议采用<a href="https://fenglai0802.github.io/2016/08/03/%E5%88%A9%E7%94%A8%E6%A8%A1%E5%9D%97n%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/">n模块安装</a>)</li>
 <li>安装git（安装Xcode自带）</li>
 <li>申请github账号</li>
 </ul>
@@ -1436,7 +1439,7 @@ $(&quot;#top&quot;).on(&quot;mousemove&quot;, function(t) {
 </ul>
 <p>此时public文件夹下的内容就会被上传到你的github中fenglai0802.github.io的这个项目下。</p>
 <ul>
-<li><p>然后再浏览器中输入 <a href="https://fenglai0802.github.io/" target="_blank" rel="external">https://fenglai0802.github.io/</a> 就可以查看了。</p>
+<li><p>然后再浏览器中输入 <a href="https://fenglai0802.github.io/">https://fenglai0802.github.io/</a> 就可以查看了。</p>
 </li>
 <li><p>每次部署的步骤，可按以下三步来进行。(建议自己写一个shell方便发布)</p>
 <pre><code>$ hexo clean
@@ -1487,7 +1490,7 @@ $ hexo deploy
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -1654,27 +1657,27 @@ o   6.0.0
       
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/heiyue.jpeg"
+               src="/images/1.jpg"
                alt="黑月" />
           <p class="site-author-name" itemprop="name">黑月</p>
-          <p class="site-description motion-element" itemprop="description">弱小和无知不是生存的障碍，傲慢才是。</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              
                 <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -1699,17 +1702,6 @@ o   6.0.0
         
 
         <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/fenglai0802" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
           
         </div>
 
@@ -1756,6 +1748,22 @@ o   6.0.0
 
         
 
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
         
       </div>
     </footer>
@@ -1786,51 +1794,30 @@ o   6.0.0
 
 
   
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  
-
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
 
@@ -1841,7 +1828,31 @@ o   6.0.0
 
   
 
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
   
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
 
 </body>
 </html>
